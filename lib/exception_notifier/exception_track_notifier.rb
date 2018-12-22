@@ -50,6 +50,8 @@ module ExceptionNotifier
       headers << "Language:    #{env['HTTP_ACCEPT_LANGUAGE']}"
       headers << "Server:      #{Socket.gethostname}"
       headers << "Process:     #{$PROCESS_ID}"
+      
+      headers << "Data:        #{env["exception_notifier.exception_data"]}"
 
       headers.join("\n")
     end
