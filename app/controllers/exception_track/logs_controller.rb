@@ -7,7 +7,8 @@ module ExceptionTrack
 
     # GET /exception_logs
     def index
-      @logs = Log.order("id desc").page(params[:page]).per(15)
+      flash[:notice] = "this is a test."
+      @logs = Log.order("id desc").paginate(page: params[:page], per_page: 1)
     end
 
     # GET /exception_logs/1

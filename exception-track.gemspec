@@ -19,8 +19,9 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "README.md"]
 
   s.add_dependency "exception_notification", "~> 4"
-  s.add_dependency "kaminari", ">= 0.15"
+  s.add_dependency 'will_paginate', '~> 3.1.0'
+  s.add_dependency 'will_paginate-bootstrap4'
   s.add_dependency "rails", ">= 4.0", "< 7"
 
-  s.add_development_dependency "mysql2"
+  s.add_development_dependency "sqlite3"
 end

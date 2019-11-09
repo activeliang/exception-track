@@ -3,20 +3,29 @@
 <head>
   <title>Exception Track</title>
   <%= stylesheet_link_tag "exception-track/application", media: "all" %>
+  <%= stylesheet_link_tag "exception-track/tailwind", media: "all" %>
   <%= csrf_meta_tags %>
 </head>
+<link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 <body>
 
-<div class="container">
-  <% if notice %>
-  <div id="notice"><%= notice %></div>
-  <% end %>
+<div class="" style=" background: linear-gradient(#9AE6B4, #48BB78); height: 100vh; overflow: scroll;">
+  <div class="container mx-auto pb-5">
+    <% if notice %>
+      <div class="alert alert-warning" role="alert">
+        <%= notice %>
+      </div>
+    <% end %>
 
-  <%= yield %>
-</div>
+    <%= yield %>
+  </div>
 
-<div class="footer">
-  <a href="https://github.com/rails-engine/exception-track">ExceptionTrack</a> powered.
+  <div class="footer bg-secondary" style="position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;">
+  <div class="text-center">changed by activeliang</div>
+  </div>
 </div>
 
 </body>

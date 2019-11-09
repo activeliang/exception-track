@@ -5,12 +5,16 @@
     }
   }
 </script>
-<div class="toolbar">
-  <%= @logs.total_count %> exceptions
-
-  <div class="pull-right">
+<div class="toolbar d-flex justify-content-between pt-3 pb-1">
+  <div class="back-btn">
+    <%= link_to '返回首页', '/', class: 'btn btn-success'  %>
+  </div>
+  <div class="text-secondary">
+    <%= @logs.total_count %> exceptions
+  </div>
+  <div class="float-right">
     <%= form_tag(all_logs_path, method: 'delete') do %>
-      <button type="submit" class="btn btn-danger" onclick="return confirmDestroyAll()">Delete All</button>
+      <button type="submit" class="btn btn-outline-primary" onclick="return confirmDestroyAll()">Delete All</button>
     <% end %>
   </div>
 </div>
@@ -18,27 +22,28 @@
 <% if @logs.blank? %>
   <div class="no-record">No exceptions.</div>
 <% else %>
-  <%= paginate @logs %>
 
-  <table class="table table-borded tabl">
+  <table class="table table-bordered table">
     <thead>
-      <tr>
-        <th>#</th>
-        <th>Summary</th>
-        <th class="date"></th>
+      <tr > 
+        <th class="pppp-3">#</th>
+        <th class="pppp-3">Summary</th>
+        <th class="pppp-3"></th>
       </tr>
     </thead>
 
-    <tbody>
+    <tbody> 
       <% @logs.each do |log| %>
         <tr>
-          <td><%= log.id %></td>
-          <td><%= link_to log.title, log %></td>
-          <td class="date"><%= log.created_at.to_s %></td>
+          <td class="pppp-3"><%= log.id %></td>
+          <td class="pppp-3"><%= link_to log.title, log %></td>
+          <td class="pppp-3"><%= log.created_at.in_time_zone(8).strftime('%F %T') %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
 
-  <%= paginate @logs %>
+  <div class="digg_pagination" style="background: transparent;">
+    <%= will_paginate @posts, :container => false %>
+  </div>
 <% end %>
