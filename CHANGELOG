@@ -1,3 +1,10 @@
+0.5.2
+-----
+
+- Use will_paginate instead or Kaminari.
+- import bootstrap ui
+
+
 0.5.1
 -----
 
