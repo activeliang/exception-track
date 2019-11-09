@@ -1,11 +1,10 @@
 PATH
   remote: .
   specs:
-    exception-track (0.5.1)
+    exception-track (0.5.2)
       exception_notification (~> 4)
       rails (>= 4.0, < 7)
-      will_paginate (~> 3.1.0)
-      will_paginate-bootstrap4
+      will_paginate
 
 GEM
   remote: https://rubygems.org/
@@ -148,9 +147,7 @@ GEM
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
-    will_paginate (3.1.8)
-    will_paginate-bootstrap4 (0.2.2)
-      will_paginate (~> 3.0, >= 3.0.0)
+    will_paginate (3.2.1)
     zeitwerk (2.2.1)
 
 PLATFORMS

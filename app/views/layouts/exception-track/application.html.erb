@@ -2,9 +2,62 @@
 <html>
 <head>
   <title>Exception Track</title>
-  <%= stylesheet_link_tag "exception-track/application", media: "all" %>
-  <%= stylesheet_link_tag "exception-track/tailwind", media: "all" %>
   <%= csrf_meta_tags %>
+  <style>
+  .digg_pagination {
+  background: white;
+  cursor: default;
+  /* self-clearing method: */ }
+  .digg_pagination a, .digg_pagination span, .digg_pagination em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px; }
+  .digg_pagination .disabled {
+    color: #999999;
+    border: 1px solid #dddddd; }
+  .digg_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background: #007bff;
+    color: white;
+    border: 1px solid #007bff; }
+  .digg_pagination a {
+    text-decoration: none;
+    color: #007bff;
+    border: 1px solid #9aafe5; }
+    .digg_pagination a:hover, .digg_pagination a:focus {
+      color: #000033;
+      border-color: #000033; }
+  .digg_pagination .page_info {
+    background: #007bff;
+    color: white;
+    padding: 0.4em 0.6em;
+    width: 22em;
+    margin-bottom: 0.3em;
+    text-align: center; }
+    .digg_pagination .page_info b {
+      color: #000033;
+      background: #007bff;
+      padding: 0.1em 0.25em; }
+  .digg_pagination:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  * html .digg_pagination {
+    height: 1%; }
+  *:first-child + html .digg_pagination {
+    overflow: hidden; }
+    .digg_pagination> * {
+    text-decoration: none;
+    color: #007bff;
+    border: 1px solid #9aafe5;
+    border-radius: .3rem;
+    margin: .3rem;
+}
+  </style>
 </head>
 <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 <body>
