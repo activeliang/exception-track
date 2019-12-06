@@ -9,7 +9,7 @@
   <div class="back-btn">
     <%= link_to '返回首页', '/', class: 'btn btn-success'  %>
   </div>
-  <div class="text-secondary">
+  <div class="text-light">
     <%= @logs.total_count %> exceptions
   </div>
   <div class="float-right">
@@ -23,20 +23,20 @@
   <div class="no-record">No exceptions.</div>
 <% else %>
 
-  <table class="table table-bordered table">
+  <table class="table table-bordered border-light table-dark">
     <thead>
-      <tr > 
+      <tr >
         <th class="pppp-3">#</th>
         <th class="pppp-3">Summary</th>
         <th class="pppp-3"></th>
       </tr>
     </thead>
 
-    <tbody> 
+    <tbody>
       <% @logs.each do |log| %>
         <tr>
           <td class="pppp-3"><%= log.id %></td>
-          <td class="pppp-3"><%= link_to log.title, log %></td>
+          <td class="pppp-3"><%= link_to log.title, log, class: 'text-light' %></td>
           <td class="pppp-3"><%= log.created_at.in_time_zone(8).strftime('%F %T') %></td>
         </tr>
       <% end %>

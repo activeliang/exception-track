@@ -62,8 +62,8 @@
 <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 <body>
 
-<div class="" style=" background: linear-gradient(#9AE6B4, #48BB78); height: 100vh; overflow: scroll;">
-  <div class="container mx-auto pb-5">
+<div class="bg-dark text-light" style=" height: 100vh; overflow: scroll;">
+  <div class="container mx-auto pb-5 text-light">
     <% if notice %>
       <div class="alert alert-warning" role="alert">
         <%= notice %>
@@ -73,13 +73,14 @@
     <%= yield %>
   </div>
 
-  <div class="footer bg-secondary" style="position: fixed;
+  <div class="footer bg-secondary text-light" style="position: fixed;
     bottom: 0;
     left: 0;
     right: 0;">
   <div class="text-center">
-    ExceptionTrack powered.
-    <span class="ml-4">Improvement by activeliang</span>
+    ExceptionTrack powered
+    <span class="ml-1">/</span>
+    <span class="ml-1">Support by activeliang</span>
   </div>
   </div>
 </div>
